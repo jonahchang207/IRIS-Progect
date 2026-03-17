@@ -1,0 +1,13 @@
+{
+    "autodeskProduct": "Fusion360",
+    "type": "addin",
+    "id": "3c8f1a2e-4b5d-6c7e-8f9a-0b1c2d3e4f50",
+    "author": "IRIS Project",
+    "description": {
+        "": "Parametric cycloidal gearbox generator — builds disc, ring housing and output flange then assembles them with motion joints"
+    },
+    "version": "1.0.0",
+    "runOnStartup": false,
+    "supportedOS": "windows|mac",
+    "editEnabled": true
+}
