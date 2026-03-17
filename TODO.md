@@ -65,6 +65,20 @@
 
 ---
 
+## Phase 6 — Flutter Desktop UI (macOS + Windows)
+> Full detail in `flutter_ui/TODO.md` · Architecture in `flutter_ui/PLAN.md`
+
+- [ ] **F1** Python bridge server (`host/bridge_server.py`) — FastAPI + WebSocket wrapping existing Python code
+- [ ] **F2** Flutter project setup — macOS + Windows targets, packages, theme, window sizing
+- [ ] **F3** Models + services — `JointState`, `Detection`, `LogEntry`, WebSocket parsers
+- [ ] **F4** Riverpod providers — bridge connection, joint stream, camera stream, log buffer, pipeline state
+- [ ] **F5** Widgets — E-STOP overlay, joint arc gauges, sliders+jog cards, camera feed, detection overlay, log view
+- [ ] **F6** Screens — Dashboard, Manual Control, Pipeline, Console, Settings
+- [ ] **F7** Bridge launch + integration — auto-start, reconnect, end-to-end smoke test
+- [ ] **F8** Polish + distribution — keyboard shortcuts, `flutter build macos/windows`, optional PyInstaller
+
+---
+
 ## Open Questions (Need Answers Before Code)
 
 | # | Question | Blocks |
