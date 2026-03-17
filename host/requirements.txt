@@ -1,0 +1,10 @@
+ultralytics>=8.3.0
+roboflow>=1.1.0
+opencv-python>=4.10.0
+pyserial>=3.5
+numpy>=1.26.0
+pyyaml>=6.0
+fastapi>=0.115.0
+uvicorn[standard]>=0.32.0
+python-multipart>=0.0.12
+websockets>=13.0
