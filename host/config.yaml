@@ -1,0 +1,81 @@
+# ============================================================
+#  IRIS Host Configuration
+#  All PLACEHOLDER values must be filled in after physical setup
+# ============================================================
+
+serial:
+  port: auto                    # 'auto' detects Teensy, or set e.g. '/dev/ttyACM0' / 'COM5'
+  baud: 115200
+  timeout_s: 5.0
+  command_delay_ms: 10          # min gap between sent commands
+
+camera:
+  index: 0                      # OpenCV camera index; 0 = first USB cam
+  width:  1280                  # PLACEHOLDER: match your camera resolution
+  height: 720                   # PLACEHOLDER
+  fps:    30
+  # Calibration output file (written by calibrate_camera.py, read by vision.py)
+  calibration_file: "models/camera_calibration.npz"
+
+vision:
+  model_path: "models/IRIS_best.pt"   # path to trained YOLO weights
+  conf_threshold: 0.50               # detection confidence threshold
+  iou_threshold:  0.45               # NMS IoU threshold
+  imgsz: 640
+  device: "cpu"                      # 'cpu' or '0' for GPU
+
+  # Camera-to-robot-base extrinsic transform
+  # PLACEHOLDER: fill in after camera calibration + hand-eye calibration
+  # 4x4 homogeneous transform [R|t] from camera frame to robot base frame
+  T_cam_to_base:
+    - [1.0, 0.0, 0.0, 0.0]          # PLACEHOLDER
+    - [0.0, 1.0, 0.0, 0.0]          # PLACEHOLDER
+    - [0.0, 0.0, 1.0, 0.3]          # PLACEHOLDER (0.3m above base)
+    - [0.0, 0.0, 0.0, 1.0]
+
+  # Working plane height in robot base frame (z_base of the table surface)
+  table_z_m: 0.0                    # PLACEHOLDER
+
+ik:
+  # DH parameters — PLACEHOLDER: measure from CAD/physical arm (all in metres)
+  # Format: [a, alpha_deg, d, theta_offset_deg]
+  dh_params:
+    - [0.000,  90.0, 0.100, 0.0]    # J1: d1 = base height          PLACEHOLDER
+    - [0.250,   0.0, 0.000, 0.0]    # J2: a2 = upper arm length     PLACEHOLDER
+    - [0.220,   0.0, 0.000, 0.0]    # J3: a3 = forearm length       PLACEHOLDER
+    - [0.000,  90.0, 0.000, 0.0]    # J4: wrist roll                PLACEHOLDER
+    - [0.000, -90.0, 0.000, 0.0]    # J5: wrist pitch               PLACEHOLDER
+    - [0.000,   0.0, 0.080, 0.0]    # J6: tool / EE offset          PLACEHOLDER
+
+  # Joint limits (degrees) — must match firmware config.h
+  joint_limits:
+    j1: [-170.0,  170.0]
+    j2: [ -90.0,   90.0]
+    j3: [-135.0,  135.0]
+    j4: [-170.0,  170.0]
+    j5: [ -90.0,   90.0]
+    j6: [-170.0,  170.0]
+
+  # IK solver tolerance
+  position_tol_mm: 0.5
+  max_iter: 50
+
+arm:
+  # Home pose (degrees) — where arm rests between picks
+  home_pose_deg: [0.0, 0.0, 90.0, 0.0, 90.0, 0.0]   # PLACEHOLDER
+
+  # Pick approach offset — lifts above target before descending
+  approach_height_m: 0.08    # PLACEHOLDER
+
+  # Pick grip close step (degrees for J6 gripper, or send GRIP command)
+  grip_close_deg: 45.0       # PLACEHOLDER
+  grip_open_deg:   0.0
+
+  # Fixed drop location in robot base frame [x, y, z, rx, ry, rz] (metres / degrees)
+  drop_pose_m: [0.20, 0.20, 0.15, 0.0, 180.0, 0.0]  # PLACEHOLDER
+
+pipeline:
+  loop_hz: 10               # main detection/control loop rate
+  pick_settle_ms: 300       # wait after arm stops before picking
+  place_settle_ms: 300
+  min_detections: 3         # frames object must appear before pick is triggered

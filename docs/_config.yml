@@ -1,0 +1,43 @@
+title: IRIS — Intelligent Robotic Identification and Sorting
+description: A 6DOF 3D-printed robotic arm that detects and sorts screws using YOLOv11 vision and analytical inverse kinematics.
+baseurl: "/IRIS-Progect"
+url: "https://jonahchang.github.io"
+
+theme: just-the-docs
+
+# Site navigation order
+nav_sort: order
+
+# Colour scheme (dark feels right for a robotics project)
+color_scheme: dark
+
+# Search
+search_enabled: true
+search:
+  heading_level: 2
+  previews: 3
+
+# Footer
+footer_content: "IRIS Project · MIT License"
+
+# Aux links (top-right nav)
+aux_links:
+  "GitHub":
+    - "https://github.com/jonahchang/IRIS-Progect"
+
+aux_links_new_tab: true
+
+# Callouts
+callouts:
+  warning:
+    title: Warning
+    color: yellow
+  note:
+    title: Note
+    color: blue
+  placeholder:
+    title: Placeholder
+    color: purple
+
+plugins:
+  - jekyll-seo-tag
