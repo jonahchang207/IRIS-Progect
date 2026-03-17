@@ -11,7 +11,7 @@ A 6DOF 3D-printed robotic arm that uses a YOLOv11 vision model to detect screws 
 {: .fs-6 .fw-300 }
 
 [Get Started]({{ site.baseurl }}/pages/setup){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
-[View on GitHub](https://github.com/jonahchang/IRIS-Progect){: .btn .fs-5 .mb-4 .mb-md-0 }
+[View on GitHub](https://github.com/jonahchang207/IRIS-Progect){: .btn .fs-5 .mb-4 .mb-md-0 }
 
 ---
 

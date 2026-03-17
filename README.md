@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <a href="https://jonahchang.github.io/IRIS-Progect"><img src="https://img.shields.io/badge/docs-GitHub%20Pages-blue?style=flat-square" alt="Docs"/></a>
+  <a href="https://jonahchang207.github.io/IRIS-Progect"><img src="https://img.shields.io/badge/docs-GitHub%20Pages-blue?style=flat-square" alt="Docs"/></a>
   <img src="https://img.shields.io/badge/platform-Teensy%204.1-orange?style=flat-square" alt="Platform"/>
   <img src="https://img.shields.io/badge/model-YOLOv11s-green?style=flat-square" alt="Model"/>
   <img src="https://img.shields.io/badge/DOF-6-purple?style=flat-square" alt="DOF"/>
@@ -34,7 +34,7 @@ A 6DOF 3D-printed robotic arm that uses a YOLOv11 vision model to detect screws 
 **Hardware:** Teensy 4.1 · 6× DM542T drivers · 2× NEMA 23 (J1–J2) · 4× NEMA 17 (J3–J6) · 6× limit switches
 **Software:** YOLOv11s · Analytical 6DOF IK · Trapezoidal trajectory · Python orchestration
 
-**[Full documentation →](https://jonahchang.github.io/IRIS-Progect)**
+**[Full documentation →](https://jonahchang207.github.io/IRIS-Progect)**
 
 ---
 

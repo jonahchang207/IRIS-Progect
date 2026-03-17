@@ -46,7 +46,7 @@ pip install platformio
 ## Step 1 — Clone the repository
 
 ```bash
-git clone https://github.com/jonahchang/IRIS-Progect.git
+git clone https://github.com/jonahchang207/IRIS-Progect.git
 cd "IRIS-Progect"
 ```
 
